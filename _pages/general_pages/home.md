@@ -4,11 +4,16 @@ title: Home
 permalink: /
 ---
 <div style="border-left: 5px solid #f97316; background-color: #fff7ed; padding: 1rem; margin: 1rem 0; border-radius: 0.5rem; color: #7c2d12;">
-<p>Docker submission deadline has been extended to August 03, 2026! We have sent the notification to the registered emails. You can refer to our <a href="https://www.zmic.org.cn/care_2026/test_submission/" target="_blank" rel="noopener noreferrer"><strong>Test Submission Page</strong></a> and <a href="https://www.zmic.org.cn/care_2026/paper_submission/" target="_blank" rel="noopener noreferrer"><strong>Paper Submission Page</strong></a> for more details.</p>
-<p><strong>Note</strong>: The submission of test results and the paper are separate. That is, participants can submit only the Docker container for testing, or only the paper, or both.</p>
-<p><strong>Note</strong>: The validation platform remains active during the test phase; you may continue submitting validation predictions as per previous instructions, and the leaderboard will update accordingly.</p>
-<p>If you have any questions, please contact <a href="mailto:care26challenge@163.com">care26challenge@163.com</a> or <a href="mailto:care2026challenge@outlook.com">care2026challenge@outlook.com</a>.</p>
+<p>CARE 2026 has successfully concluded. Thank you all for your active participation! By 2026.08.26, we have <strong>279</strong> teams participated, and received <strong>48</strong> paper submission. You can refer to our <a href="https://www.zmic.org.cn/care_2026/general_info/" target="_blank" rel="noopener noreferrer"><strong>General Info Page</strong></a> for more details. Leaderboards will be released after the workshop. </p>
+<p><strong>Contact</strong>: If you have any questions, please contact <a href="mailto:care26challenge@163.com">care26challenge@163.com</a> or <a href="mailto:care2026challenge@outlook.com">care2026challenge@outlook.com</a>.</p>
 </div>
+
+<a href="https://openreview.net/group?id=MICCAI.org%2F2026%2FWorkshop%2FCARE#tab-accept" target="_blank" 
+   style="display:inline-block; padding:14px 36px; background-color:#1a73e8; color:#fff; 
+          font-size:18px; font-weight:600; text-decoration:none; border-radius:30px; 
+          box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    CARE 2026 accepted papers (29)
+</a>
 
 ## Motivation 
 
@@ -20,28 +25,22 @@ Medical image analysis empowered by AI has significantly reshaped medicine. Howe
 
 This challenge consists of **4** challenging tracks and encompasses imaging data from over **2000 patients** collected across **three continents**, capturing diverse acquisition protocols, clinical centers, and patient populations. Participants can explore each track below to access the corresponding datasets and detailed task descriptions.
 
-[**<u>CARE-Left Atrium</u>**](/care_2026/track_leftatrium): Left Atrial Segmentation and Analysis [**(register here to access the dataset)**](http://zmic.org.cn/care_2026/eval/register?track=leftatrium).
+[**<u>CARE-Left Atrium</u>**](/care_2026/track_leftatrium): Left Atrial Segmentation and Analysis.
 
-[**<u>CARE-Liver</u>**](/care_2026/track_liver): Liver Segmentation and Fibrosis Staging [**(register here to access the dataset)**](http://zmic.org.cn/care_2026/eval/register?track=liver).
+[**<u>CARE-Liver</u>**](/care_2026/track_liver): Liver Segmentation and Fibrosis Staging.
 
-[**<u>CARE-Myocardium</u>**](/care_2026/track_myocardium): Myocardial Pathology Segmentation [**(register here to access the dataset)**](http://zmic.org.cn/care_2026/eval/register?track=myocardium).
+[**<u>CARE-Myocardium</u>**](/care_2026/track_myocardium): Myocardial Pathology Segmentation.
 
-[**<u>CARE-Whole Heart</u>**](/care_2026/track_wholeheart): Whole Heart Segmentation [**(register here to access the dataset)**](http://zmic.org.cn/care_2026/eval/register?track=wholeheart).
-
-
+[**<u>CARE-Whole Heart</u>**](/care_2026/track_wholeheart): Whole Heart Segmentation.
 
 ## Submission
 
 After registration, we will assign participants an account to login into our evaluation platform. Participants can directly upload your predictions and docker via the website. For paper submission, please refer to our [paper submission guidance](/care_2026/paper_submission).
 
-**Contact**: If you have any questions, please feel free to contact: [care26challenge@163.com](mailto:care26challenge@163.com) or [care2026challenge@outlook.com](mailto:care2026challenge@outlook.com).
 
-<!--
 ## Post-Challenge Data Request
 
 For post-challenge data access requests, please contact [care26challenge@163.com](mailto:care26challenge@163.com). 
--->
-
 
 ## Timeline
 

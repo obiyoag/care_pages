@@ -2,3 +2,6 @@
 
 * Byung-Woo Hong
 * Hyun-Tae Choi
+* Tomislav Dobrički
+* Da-Eun Lee
+* Kensuke Nakamura
