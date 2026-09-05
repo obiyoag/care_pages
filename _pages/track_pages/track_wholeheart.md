@@ -28,7 +28,8 @@ _styles: >
   }
 ---
 ## Registration
-To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=wholeheart).
+Registration for CARE 2026 has been closed.
+<!--To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=wholeheart).-->
 
 ## Motivation
 

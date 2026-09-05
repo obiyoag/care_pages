@@ -26,7 +26,8 @@ _styles: >
   }
 ---
 ## Registration
-To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=liver).
+Registration for CARE 2026 has been closed.
+<!--To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=liver).-->
 
 ## Motivation
 {% include figure.liquid loading="eager" path="/assets/img/liqa1.png" class="img-fluid" zoomable=true caption="Figure 1. Track description." max-width="70%" %}

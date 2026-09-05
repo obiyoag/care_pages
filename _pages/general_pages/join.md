@@ -7,10 +7,13 @@ nav_order: 2
 ---
 
 ## Summary of Registration Platforms
+CARE 2026 has successfully concluded. Thank you all for your active participation.
+<!--
 - [Register for **CARE-Left Atrium**](http://zmic.org.cn/care_2026/eval/register?track=leftatrium)
 - [Register for **CARE-Liver**](http://zmic.org.cn/care_2026/eval/register?track=liver)
 - [Register for **CARE-Myocardium**](http://zmic.org.cn/care_2026/eval/register?track=myocardium)
 - [Register for **CARE-Whole Heart**](http://zmic.org.cn/care_2026/eval/register?track=wholeheart)
+-->
 
 ## Registration Guidance
 1. Personal information for participants is required. Please ensure that all the information you provide is accurate and truthful.
