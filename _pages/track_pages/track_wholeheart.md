@@ -270,9 +270,144 @@ This track will give **2** best performance awards according to performances acr
 
 
 ## Leaderboards
-Leaderboards will be released after test results submission.
 
-- We will provide multiple leaderboards, representing stratified performance across different modalities. In each leaderboard, in addition to DSC and HD of 7 cardiac substructures, we will also report DSC and HD of whole heart segmentation (WHS), which are weighted average (according to their volumes) from 7 substructures. 
+We will provide 2 leaderboards, representing stratified performance across different modalities, CT and MRI. In each leaderboard, in addition to DSC and HD of 7 cardiac substructures, we will also report DSC and HD of whole heart segmentation (DSC_WH and HD_WH), which are weighted average (according to their volumes) from 7 substructures. 
+
+
+<style>
+  .sortable { width:100%; border-collapse:collapse; background:#fafafa;
+              border-radius:8px; overflow:hidden; font-family:sans-serif;
+              font-size:0.95rem; margin-bottom:32px; }
+  .sortable thead tr { background:#2c3e50; color:#fff; }
+  .sortable th { text-align:left; padding:10px; cursor:pointer; user-select:none; }
+  .sortable td { padding:8px 10px; border-top:1px solid #eee; }
+  .sortable .sort-arrow { display:inline-block; margin-left:4px; font-size:0.7em;
+                          vertical-align:middle; opacity:0.3;
+                          transition:opacity .15s ease; pointer-events:none; }
+  .sortable th:hover .sort-arrow { opacity:0.65; }
+  .sortable th.sort-active .sort-arrow { opacity:1; }
+</style>
+
+### Whole heart segmentation (CT)
+<!-- ============ 表 1：WHS-CT ============ -->
+<div style="overflow-x:auto;">
+<table id="whsct" class="sortable">
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>DSC<sub>LV</sub>↑</th>
+      <th>DSC<sub>Myo</sub>↑</th>
+      <th>DSC<sub>RV</sub>↑</th>
+      <th>DSC<sub>LA</sub>↑</th>
+      <th>DSC<sub>RA</sub>↑</th>
+      <th>DSC<sub>AO</sub>↑</th>
+      <th>DSC<sub>PA</sub>↑</th>
+      <th>DSC<sub>WH</sub>↑</th>
+      <th>HD<sub>WH</sub>(mm)↓</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>BIT</td><td>0.9470</td><td>0.9307</td><td>0.9299</td><td>0.9617</td><td>0.9281</td><td>0.9609</td><td>0.8806</td><td>0.9414</td><td>11.3366</td></tr>
+    <tr><td>SJTUMedSeg</td><td>0.9456</td><td>0.9318</td><td>0.9292</td><td>0.9611</td><td>0.9273</td><td>0.9596</td><td>0.8787</td><td>0.9411</td><td>11.6841</td></tr>
+    <tr><td>VMHeart</td><td>0.9468</td><td>0.9334</td><td>0.9301</td><td>0.9624</td><td>0.9282</td><td>0.9603</td><td>0.8771</td><td>0.9420</td><td>11.7652</td></tr>
+    <tr><td>MEDII</td><td>0.9452</td><td>0.9285</td><td>0.9270</td><td>0.9601</td><td>0.9259</td><td>0.9584</td><td>0.8774</td><td>0.9396</td><td>11.7364</td></tr>
+    <tr><td>Monster</td><td>0.9431</td><td>0.9293</td><td>0.9288</td><td>0.9595</td><td>0.9258</td><td>0.9582</td><td>0.8716</td><td>0.9394</td><td>12.0265</td></tr>
+    <tr><td>AI_WHS_xjtlu</td><td>0.9421</td><td>0.9236</td><td>0.9203</td><td>0.9508</td><td>0.9161</td><td>0.9549</td><td>0.8735</td><td>0.9333</td><td>12.4595</td></tr>
+    <tr><td>M2Lab</td><td>0.9376</td><td>0.9271</td><td>0.9184</td><td>0.9595</td><td>0.8833</td><td>0.9475</td><td>0.8791</td><td>0.9305</td><td>12.8700</td></tr>
+    <tr><td>Slience</td><td>0.9337</td><td>0.9180</td><td>0.9196</td><td>0.9528</td><td>0.9119</td><td>0.9549</td><td>0.8637</td><td>0.9303</td><td>14.1676</td></tr>
+    <tr><td>NECS</td><td>0.9245</td><td>0.8817</td><td>0.8981</td><td>0.9331</td><td>0.9012</td><td>0.9340</td><td>0.8403</td><td>0.9091</td><td>13.3534</td></tr>
+    <tr><td>xigema</td><td>0.9161</td><td>0.8890</td><td>0.9012</td><td>0.9432</td><td>0.8778</td><td>0.9442</td><td>0.8531</td><td>0.9118</td><td>15.7054</td></tr>
+    <tr><td>TEAM1422_Whole_Heart</td><td>0.9197</td><td>0.9008</td><td>0.8966</td><td>0.9486</td><td>0.8885</td><td>0.9462</td><td>0.8346</td><td>0.9139</td><td>17.7390</td></tr>
+    <tr><td>DH</td><td>0.9354</td><td>0.9113</td><td>0.9131</td><td>0.9477</td><td>0.8614</td><td>0.9517</td><td>0.8709</td><td>0.9239</td><td>31.9159</td></tr>
+    <tr><td>CardiacEndeavours</td><td>0.8362</td><td>0.7327</td><td>0.8231</td><td>0.8766</td><td>0.8058</td><td>0.8278</td><td>0.6988</td><td>0.8097</td><td>18.2154</td></tr>
+    <tr><td>Kiruthiga.K</td><td>0.8362</td><td>0.7327</td><td>0.8231</td><td>0.8766</td><td>0.8058</td><td>0.8278</td><td>0.6988</td><td>0.8097</td><td>18.2154</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ============ 表 2：WHS-MR ============ -->
+### Whole heart segmentation (MRI)
+<div style="overflow-x:auto;">
+<table id="whsmr" class="sortable">
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>DSC<sub>LV</sub>↑</th>
+      <th>DSC<sub>Myo</sub>↑</th>
+      <th>DSC<sub>RV</sub>↑</th>
+      <th>DSC<sub>LA</sub>↑</th>
+      <th>DSC<sub>RA</sub>↑</th>
+      <th>DSC<sub>AO</sub>↑</th>
+      <th>DSC<sub>PA</sub>↑</th>
+      <th>DSC<sub>WH</sub>↑</th>
+      <th>HD<sub>WH</sub>(mm)↓</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>VMHeart</td><td>0.9406</td><td>0.8483</td><td>0.9036</td><td>0.9041</td><td>0.8930</td><td>0.9056</td><td>0.8476</td><td>0.9015</td><td>20.2336</td></tr>
+    <tr><td>BIT</td><td>0.9398</td><td>0.8497</td><td>0.9046</td><td>0.8986</td><td>0.8911</td><td>0.9020</td><td>0.8471</td><td>0.9001</td><td>20.3311</td></tr>
+    <tr><td>Monster</td><td>0.9398</td><td>0.8511</td><td>0.9038</td><td>0.9019</td><td>0.8904</td><td>0.9028</td><td>0.8412</td><td>0.9005</td><td>21.0346</td></tr>
+    <tr><td>AI_WHS_xjtlu</td><td>0.9379</td><td>0.8425</td><td>0.8967</td><td>0.8990</td><td>0.8895</td><td>0.8979</td><td>0.8401</td><td>0.8959</td><td>20.2396</td></tr>
+    <tr><td>MEDII</td><td>0.9390</td><td>0.8436</td><td>0.9024</td><td>0.8992</td><td>0.8907</td><td>0.9028</td><td>0.8470</td><td>0.8986</td><td>20.9197</td></tr>
+    <tr><td>SJTUMedSeg</td><td>0.9388</td><td>0.8443</td><td>0.9019</td><td>0.9013</td><td>0.8900</td><td>0.9049</td><td>0.8429</td><td>0.8990</td><td>21.1861</td></tr>
+    <tr><td>M2Lab</td><td>0.9375</td><td>0.8462</td><td>0.9033</td><td>0.8901</td><td>0.8867</td><td>0.9029</td><td>0.8404</td><td>0.8960</td><td>21.2334</td></tr>
+    <tr><td>DH</td><td>0.9256</td><td>0.8217</td><td>0.8614</td><td>0.8999</td><td>0.8817</td><td>0.8711</td><td>0.8019</td><td>0.8832</td><td>28.5251</td></tr>
+    <tr><td>Kiruthiga.K</td><td>0.8418</td><td>0.6665</td><td>0.7959</td><td>0.8296</td><td>0.8035</td><td>0.7829</td><td>0.6676</td><td>0.7829</td><td>22.9774</td></tr>
+    <tr><td>CardiacEndeavours</td><td>0.8418</td><td>0.6665</td><td>0.7959</td><td>0.8296</td><td>0.8035</td><td>0.7829</td><td>0.6676</td><td>0.7829</td><td>22.9774</td></tr>
+    <tr><td>Slience</td><td>0.9134</td><td>0.7707</td><td>0.8544</td><td>0.8774</td><td>0.8606</td><td>0.8271</td><td>0.8025</td><td>0.8608</td><td>43.9680</td></tr>
+    <tr><td>TEAM1422_Whole_Heart</td><td>0.7579</td><td>0.5580</td><td>0.6512</td><td>0.8000</td><td>0.7452</td><td>0.7817</td><td>0.4876</td><td>0.7064</td><td>43.8478</td></tr>
+    <tr><td>xigema</td><td>0.8613</td><td>0.7355</td><td>0.7895</td><td>0.7923</td><td>0.7611</td><td>0.8015</td><td>0.7338</td><td>0.7986</td><td>74.9196</td></tr>
+    <tr><td>NECS</td><td>0.8076</td><td>0.6866</td><td>0.5575</td><td>0.5578</td><td>0.3987</td><td>0.5224</td><td>0.0753</td><td>0.6165</td><td>73.5788</td></tr>
+  </tbody>
+</table>
+</div>
+
+<script>
+function initSortable(tableId){
+  var t = document.getElementById(tableId);
+  if (!t) return;
+
+  var tb  = t.tBodies[0];
+  var ths = [].slice.call(t.tHead.rows[0].cells);
+  var asc = [];   // 该表独立的排序状态
+
+  ths.forEach(function(th, i){
+    var arrow = document.createElement("span");
+    arrow.className = "sort-arrow";
+    arrow.textContent = "▲";
+    th.appendChild(arrow);
+
+    th.onclick = function(){
+      asc[i] = !asc[i];
+
+      // 本表内：只有当前列高亮，其余列复位变暗
+      ths.forEach(function(h, j){
+        var a = h.querySelector(".sort-arrow");
+        if (j === i) {
+          h.classList.add("sort-active");
+          a.textContent = asc[i] ? "▲" : "▼";
+        } else {
+          h.classList.remove("sort-active");
+          a.textContent = "▲";
+        }
+      });
+
+      var rs = [].slice.call(tb.rows);
+      rs.sort(function(a, b){
+        var x = a.cells[i].textContent.trim();
+        var y = b.cells[i].textContent.trim();
+        var nx = parseFloat(x), ny = parseFloat(y);
+        var c = (!isNaN(nx) && !isNaN(ny)) ? nx - ny : x.localeCompare(y);
+        return asc[i] ? c : -c;
+      });
+      rs.forEach(function(r){ tb.appendChild(r); });
+    };
+  });
+}
+
+initSortable("whsct");
+initSortable("whsmr");
+</script>
 
 ## Citations
 **Please cite these papers when you use the data for publications:**

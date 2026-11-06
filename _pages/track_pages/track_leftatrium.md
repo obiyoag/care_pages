@@ -147,7 +147,138 @@ The performance of LA cavity segmentation, LA scar quantification and cardiac st
 4. We will only award prizes for LA scar quantification (MRI) and LA multi-structure segmentation (CT).
 
 ## Leaderboards
-Leaderboards will be released after test results submission.
+
+<style>
+  .sortable { width:100%; border-collapse:collapse; background:#fafafa;
+              border-radius:8px; overflow:hidden; font-family:sans-serif;
+              font-size:0.95rem; margin-bottom:32px; }
+  .sortable thead tr { background:#2c3e50; color:#fff; }
+  .sortable th { text-align:left; padding:10px; cursor:pointer; user-select:none; }
+  .sortable td { padding:8px 10px; border-top:1px solid #eee; }
+  .sortable .sort-arrow { display:inline-block; margin-left:4px; font-size:0.7em;
+                          vertical-align:middle; opacity:0.3;
+                          transition:opacity .15s ease; pointer-events:none; }
+  .sortable th:hover .sort-arrow { opacity:0.65; }
+  .sortable th.sort-active .sort-arrow { opacity:1; }
+</style>
+
+### LA scar quantification (MRI)
+<!-- ============ 表 1：LA scar quantification (MRI) ============ -->
+<div style="overflow-x:auto;">
+<table id="latask1" class="sortable">
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>ACC↑</th>
+      <th>G-DSC↑</th>
+      <th>SEN↑</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>HDD</td><td>0.7549</td><td>0.4361</td><td>0.5099</td></tr>
+    <tr><td>IMUMedical</td><td>0.7386</td><td>0.4206</td><td>0.4774</td></tr>
+    <tr><td>OrganAgent</td><td>0.7200</td><td>0.4308</td><td>0.4401</td></tr>
+    <tr><td>ITU_DL</td><td>0.7108</td><td>0.4290</td><td>0.4217</td></tr>
+    <tr><td>Revenger</td><td>0.7087</td><td>0.4298</td><td>0.4176</td></tr>
+    <tr><td>Monster</td><td>0.6562</td><td>0.3710</td><td>0.3124</td></tr>
+    <tr><td>nnU-Net Runners</td><td>0.6493</td><td>0.2954</td><td>0.2986</td></tr>
+    <tr><td>DH</td><td>0.6452</td><td>0.3505</td><td>0.2905</td></tr>
+    <tr><td>GenMI</td><td>0.6416</td><td>0.3627</td><td>0.2833</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ============ 表 2：LA cavity segmentation (MRI) ============ -->
+### LA cavity segmentation (MRI)
+<div style="overflow-x:auto;">
+<table id="latask2" class="sortable">
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Dice↑</th>
+      <th>HD(mm)↓</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>DH</td><td>0.8241</td><td>20.5479</td></tr>
+    <tr><td>GenMI</td><td>0.8300</td><td>22.5533</td></tr>
+    <tr><td>Revenger</td><td>0.8285</td><td>20.2686</td></tr>
+    <tr><td>Monster</td><td>0.8299</td><td>20.3099</td></tr>
+  </tbody>
+</table>
+</div>
+
+
+<!-- ============ 表 3：LA multi-structure segmentation (CT) ============ -->
+### LA multi-structure segmentation (CT)
+<div style="overflow-x:auto;">
+<table id="latask3" class="sortable">
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Dice↑</th>
+      <th>HD(mm)↓</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Monster</td><td>0.9549</td><td>9.2957</td></tr>
+    <tr><td>GenMI</td><td>0.9538</td><td>9.3318</td></tr>
+    <tr><td>Revenger</td><td>0.9543</td><td>9.7201</td></tr>
+    <tr><td>HDD</td><td>0.9541</td><td>9.9759</td></tr>
+    <tr><td>NECS</td><td>0.8318</td><td>13.4589</td></tr>
+    <tr><td>DH</td><td>0.8529</td><td>22.4026</td></tr>
+  </tbody>
+</table>
+</div>
+
+<script>
+function initSortable(tableId){
+  var t = document.getElementById(tableId);
+  if (!t) return;
+
+  var tb  = t.tBodies[0];
+  var ths = [].slice.call(t.tHead.rows[0].cells);
+  var asc = [];   // 该表独立的排序状态
+
+  ths.forEach(function(th, i){
+    var arrow = document.createElement("span");
+    arrow.className = "sort-arrow";
+    arrow.textContent = "▲";
+    th.appendChild(arrow);
+
+    th.onclick = function(){
+      asc[i] = !asc[i];
+
+      // 本表内：只有当前列高亮，其余列复位变暗
+      ths.forEach(function(h, j){
+        var a = h.querySelector(".sort-arrow");
+        if (j === i) {
+          h.classList.add("sort-active");
+          a.textContent = asc[i] ? "▲" : "▼";
+        } else {
+          h.classList.remove("sort-active");
+          a.textContent = "▲";
+        }
+      });
+
+      var rs = [].slice.call(tb.rows);
+      rs.sort(function(a, b){
+        var x = a.cells[i].textContent.trim();
+        var y = b.cells[i].textContent.trim();
+        var nx = parseFloat(x), ny = parseFloat(y);
+        var c = (!isNaN(nx) && !isNaN(ny)) ? nx - ny : x.localeCompare(y);
+        return asc[i] ? c : -c;
+      });
+      rs.forEach(function(r){ tb.appendChild(r); });
+    };
+  });
+}
+
+initSortable("latask1");
+initSortable("latask2");
+initSortable("latask3");
+</script>
+
 
 ## Citations
 **Please cite these papers when you use the data for publications:**
