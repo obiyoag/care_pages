@@ -286,6 +286,114 @@ The performance of scar and edema segmentation results will be evaluated by：
 - **Only automatic methods are acceptable.** Participants must utilize algorithms that do not require manual intervention or human-assisted processes for the segmentation task.
 - **Pre-trained models are  allowed in this track.** The solutions could be developed with pre-trained fundation models, such as SAM, CLIP, and MedSAM.
 
+## Leaderboards
+
+<style>
+  .sortable { width:100%; border-collapse:collapse; background:#fafafa;
+              border-radius:8px; overflow:hidden; font-family:sans-serif;
+              font-size:0.95rem; margin-bottom:32px; }
+  .sortable thead tr { background:#2c3e50; color:#fff; }
+  .sortable th { text-align:left; padding:10px; cursor:pointer; user-select:none; }
+  .sortable td { padding:8px 10px; border-top:1px solid #eee; }
+  .sortable .sort-arrow { display:inline-block; margin-left:4px; font-size:0.7em;
+                          vertical-align:middle; opacity:0.3;
+                          transition:opacity .15s ease; pointer-events:none; }
+  .sortable th:hover .sort-arrow { opacity:0.65; }
+  .sortable th.sort-active .sort-arrow { opacity:1; }
+</style>
+
+### Myocardial Pathology Segmentation
+<!-- ============ 表 1：Myops ============ -->
+<div style="overflow-x:auto;">
+<table id="myops" class="sortable">
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>DSC<sub>Scar</sub>↑</th>
+      <th>HD<sub>Scar</sub>(mm)↓</th>
+      <th>DSC<sub>Edema</sub>↑</th>
+      <th>HD<sub>Edema</sub>(mm)↓</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>MatU(SP+A)</td><td>0.6510</td><td>18.9150</td><td>0.6720</td><td>23.9050</td></tr>
+    <tr><td>ZQH</td><td>0.6090</td><td>23.1910</td><td>0.6380</td><td>26.3090</td></tr>
+    <tr><td>Sheffield_Heart</td><td>0.6160</td><td>22.4050</td><td>0.6530</td><td>27.7170</td></tr>
+    <tr><td>OrganAgent</td><td>0.6040</td><td>24.5020</td><td>0.6420</td><td>25.0220</td></tr>
+    <tr><td>Majin</td><td>0.6080</td><td>22.9860</td><td>0.6370</td><td>29.6650</td></tr>
+    <tr><td>NECS</td><td>0.3430</td><td>68.9060</td><td>0.3700</td><td>68.0700</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ============ 表 2：cinemyops ============ -->
+### Cine Myocardial Pathology Segmentation
+<div style="overflow-x:auto;">
+<table id="cinemyops" class="sortable">
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>DSC<sub>Scar</sub>↑</th>
+      <th>HD<sub>Scar</sub>(mm)↓</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>ZQH</td><td>0.3808</td><td>33.5566</td></tr>
+    <tr><td>NCC1H</td><td>0.3590</td><td>37.1990</td></tr>
+    <tr><td>XiaohanYuan</td><td>0.4840</td><td>60.7090</td></tr>
+    <tr><td>OrganAgent</td><td>0.3330</td><td>41.2850</td></tr>
+    <tr><td>NECS</td><td>0.1146</td><td>146.2665</td></tr>
+  </tbody>
+</table>
+</div>
+
+<script>
+function initSortable(tableId){
+  var t = document.getElementById(tableId);
+  if (!t) return;
+
+  var tb  = t.tBodies[0];
+  var ths = [].slice.call(t.tHead.rows[0].cells);
+  var asc = [];   // 该表独立的排序状态
+
+  ths.forEach(function(th, i){
+    var arrow = document.createElement("span");
+    arrow.className = "sort-arrow";
+    arrow.textContent = "▲";
+    th.appendChild(arrow);
+
+    th.onclick = function(){
+      asc[i] = !asc[i];
+
+      // 本表内：只有当前列高亮，其余列复位变暗
+      ths.forEach(function(h, j){
+        var a = h.querySelector(".sort-arrow");
+        if (j === i) {
+          h.classList.add("sort-active");
+          a.textContent = asc[i] ? "▲" : "▼";
+        } else {
+          h.classList.remove("sort-active");
+          a.textContent = "▲";
+        }
+      });
+
+      var rs = [].slice.call(tb.rows);
+      rs.sort(function(a, b){
+        var x = a.cells[i].textContent.trim();
+        var y = b.cells[i].textContent.trim();
+        var nx = parseFloat(x), ny = parseFloat(y);
+        var c = (!isNaN(nx) && !isNaN(ny)) ? nx - ny : x.localeCompare(y);
+        return asc[i] ? c : -c;
+      });
+      rs.forEach(function(r){ tb.appendChild(r); });
+    };
+  });
+}
+
+initSortable("myops");
+initSortable("cinemyops");
+</script>
+
 
 ## Citations
 **Please cite these papers when you use the data for publications:**

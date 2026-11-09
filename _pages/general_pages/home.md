@@ -4,7 +4,8 @@ title: Home
 permalink: /
 ---
 <div style="border-left: 5px solid #f97316; background-color: #fff7ed; padding: 1rem; margin: 1rem 0; border-radius: 0.5rem; color: #7c2d12;">
-<p>CARE 2026 has successfully concluded. Thank you all for your active participation! By 2026.08.26, we have <strong>279</strong> teams participated, and received <strong>48</strong> paper submission. You can refer to our <a href="https://www.zmic.org.cn/care_2026/general_info/" target="_blank" rel="noopener noreferrer"><strong>General Info Page</strong></a> for more details. Leaderboards will be released after the workshop. </p>
+<p>CARE 2026 has successfully concluded. Thank you all for your active participation! By 2026.08.26, we have <strong>279</strong> teams participated, and received <strong>48</strong> paper submission. You can refer to our <a href="https://www.zmic.org.cn/care_2026/general_info/" target="_blank" rel="noopener noreferrer"><strong>General Info Page</strong></a> for more details. </p>
+<p>Leaderboards and awards have been released! You can refer to the <a href="https://www.zmic.org.cn/care_2026/award/" target="_blank" rel="noopener noreferrer"><strong>Award Page</strong></a> for more detials. </p>
 <p><strong>Contact</strong>: If you have any questions, please contact <a href="mailto:care26challenge@163.com">care26challenge@163.com</a> or <a href="mailto:care2026challenge@outlook.com">care2026challenge@outlook.com</a>.</p>
 </div>
 
@@ -15,7 +16,7 @@ permalink: /
     CARE 2026 accepted papers (29)
 </a>
 
-## (NEW!) CARE 2026 Workshop Program
+## CARE 2026 Workshop Program
 
 - 📍 Room: Strasbourg Convention Center, Room Auditorium Cassin (G) , Strasbourg, France
 - 📅 Date: Sunday, 27 September 2026
@@ -96,7 +97,7 @@ permalink: /
     </tr>
     <!-- Oral 3 -->
     <tr>
-      <td style="padding:8px; border-bottom:1px solid #ddd;">DOVE: Domain-Robust Ordinal Evidence Learning with 2.5D Multiple Instance Learning for MRI-Based Liver Fibrosis Staging</td>
+      <td style="padding:8px; border-bottom:1px solid #ddd;">Stable Morphology, Unstable Deep Classifiers: Morphology-Guided Ranking in Unlabeled Liver MRI Cohorts</td>
       <td style="padding:8px; border-bottom:1px solid #ddd;">16:55 – 17:05</td>
       <td style="padding:8px; border-bottom:1px solid #ddd;"><b>—</b></td>
     </tr>
@@ -132,7 +133,7 @@ permalink: /
     </tr>
     <!-- Oral 8 -->
     <tr>
-      <td style="padding:8px; border-bottom:1px solid #ddd;">Stable Morphology, Unstable Deep Classifiers: Morphology-Guided Ranking in Unlabeled Liver MRI Cohorts</td>
+      <td style="padding:8px; border-bottom:1px solid #ddd;">DOVE: Domain-Robust Ordinal Evidence Learning with 2.5D Multiple Instance Learning for MRI-Based Liver Fibrosis Staging</td>
       <td style="padding:8px; border-bottom:1px solid #ddd;">17:45 – 17:55</td>
       <td style="padding:8px; border-bottom:1px solid #ddd;"><b>—</b></td>
     </tr>
