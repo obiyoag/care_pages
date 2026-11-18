@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /join/
-title: Join the Challenge!
+title: Join
 nav: true
 nav_order: 2
 ---
