@@ -319,6 +319,7 @@ The performance of scar and edema segmentation results will be evaluated by：
     <tr><td>MatU(SP+A)</td><td>0.6510</td><td>18.9150</td><td>0.6720</td><td>23.9050</td></tr>
     <tr><td>ZQH</td><td>0.6090</td><td>23.1910</td><td>0.6380</td><td>26.3090</td></tr>
     <tr><td>Sheffield_Heart</td><td>0.6160</td><td>22.4050</td><td>0.6530</td><td>27.7170</td></tr>
+    <tr><td>Monster</td><td>0.6160</td><td>20.5880</td><td>0.6020</td><td>28.0990</td></tr>
     <tr><td>OrganAgent</td><td>0.6040</td><td>24.5020</td><td>0.6420</td><td>25.0220</td></tr>
     <tr><td>Majin</td><td>0.6080</td><td>22.9860</td><td>0.6370</td><td>29.6650</td></tr>
     <tr><td>NECS</td><td>0.3430</td><td>68.9060</td><td>0.3700</td><td>68.0700</td></tr>
